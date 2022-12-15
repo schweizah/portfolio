@@ -37,6 +37,7 @@ html, body, main, section, header, div, article, aside, figure, figcaption, imag
   h1 {
     font-size: 120px;
     color: #6EC1F5;
+    margin-bottom: 0px;
   }
   h2 {
     text-align: center;
@@ -50,7 +51,16 @@ html, body, main, section, header, div, article, aside, figure, figcaption, imag
   body {
    background: var(--background);
    background-color: #355D75;
+   animation: blinkingBackground 5s infinite;
   }
+
+  @keyframes blinkingBackground{
+		0%		{ background-color: #355d75;}
+		25%		{ background-color: #355d75f6;}
+		50%		{ background-color: #355d75ef;}
+		75%		{ background-color: #355d75f5;}
+		100%	        { background-color: #355d75;}
+	}
   .typing > *{
     overflow: hidden;
     white-space: nowrap;
@@ -208,6 +218,8 @@ ul.icons {
     cursor: default;
     list-style: none;
     padding-left: 0;
+    display: flex;
+    justify-content: center;
 }
 
     ul.icons li {
@@ -277,14 +289,17 @@ ul.icons {
   }
   .left p {
     text-overflow: clip;
-    text-align: center;
-    padding: 200px 0;
+    text-align: left;
+    line-height: 30px;
+    padding: 100px 0;
+    padding-left: 20px;
+    padding-right: 20px;
     margin: 10px;
   }
   .left img {
     float: right;
-    width: 70%;
-    height: 70%;
+    width: 550px;
+    height: auto;
     margin: auto;
 
   }
@@ -318,10 +333,10 @@ ul.icons {
   }
 
   .right iframe {
+    float: right;
+    width: 300%;
+    margin-top: 100px;
     margin: auto;
-    width: 500px;
-    height: 300px;
-    float: left;
   }
   .right p {
     line-height: 40px;
@@ -331,16 +346,16 @@ ul.icons {
   }
   
   .slideshow {
-    background-color: var(--bg);
+  
     padding: 1em;
   }
   .slideshow-wrapper {
     position: relative; /*-- this allows children to be position absolutely --*/
-    margin: auto; /*-- simple centering method--*/  max-width: 100%; /*-- contrains slideshow on largest screens --*/
+     /*-- simple centering method--*/ 
   }
   .slideshow-wrapper img {
     width: 30%; /*-- makes slideshow responsive in size --*/
-    justify-content: center;
+    margin-left: 400px;
   }
   .prev, .next {
     cursor: pointer; /*-- changes hover cursor to the hand --*/
@@ -359,9 +374,13 @@ ul.icons {
     user-select: none; /*-- prevents users from selecting buttons --*/
   }
   .next {
-    right: 0; /*-- positions next arrow hard right --*/
+    right: 400px; /*-- positions next arrow hard right --*/
     border-radius: 3px 0 0 3px; /*-- rounds the outside borders --*/
   }
+
+.prev {
+  right:720px;
+}
   .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8); /*-- gives a background for contrast on hover --*/
   }
@@ -379,6 +398,7 @@ ul.icons {
     color: #f2f2f2; /*-- sets color to almost white --*/
     font-size: 12px; /*-- sets font size --*/
     padding: 8px 12px; /*-- sets numberof padding --*/
+    padding-left: 410px;
     position: absolute; /*-- positions numberof text absolutely--*/
     top: 0; /*-- sets position hard to the top--*/
   }

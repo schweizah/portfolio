@@ -8,7 +8,7 @@ var delayInMilliseconds = 5500; //1000=1second
 
 setTimeout(function() {
     window.onload = window.scrollTo({
-        top: 800,
+        top: 750,
         left: 100,
         behavior: 'smooth'
       });
