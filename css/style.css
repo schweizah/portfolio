@@ -72,13 +72,40 @@ html, body, main, section, header, div, article, aside, figure, figcaption, imag
     margin-bottom: 350px;
 }
 
+.diagonal-section {
+  /* Used to position the diagonal area */
+  position: relative;
+}
+
+.diagonal-section__diagonal {
+  /* Absolute position */
+  left: 0px;
+  position: absolute;
+  top: 0px;
+
+  /* Take full size */
+  height: 100%;
+  width: 100%;
+
+  /* Create diagonal sides */
+  transform: skewY(-10deg);
+
+  /* Background color */
+  background-color: #182a369a;;
+
+  /* Displayed under the main content */
+  z-index: -1;
+ 
+}
+
 
 
 /* CSS */
 .button {
   appearance: none;
+  margin-left: 30px;
   backface-visibility: hidden;
-  background-color: #182a3637;
+  background-color: #6EC1F5;
   border-radius: 8px;
   border-style: none;
   box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
@@ -393,14 +420,6 @@ ul.icons {
     bottom: 8px; /*-- sets position 8px from bottom --*/
     width: 100%; /*-- sets width equal to container width --*/
     text-align: center; /*-- aligns text center --*/
-  }
-  .numberof {
-    color: #f2f2f2; /*-- sets color to almost white --*/
-    font-size: 12px; /*-- sets font size --*/
-    padding: 8px 12px; /*-- sets numberof padding --*/
-    padding-left: 410px;
-    position: absolute; /*-- positions numberof text absolutely--*/
-    top: 0; /*-- sets position hard to the top--*/
   }
   .text-center {
     display: flex;
