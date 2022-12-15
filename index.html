@@ -20,13 +20,22 @@
     
     <main>
       <header>
+        <style>
+            @font-face { font-family: Artichokey; src: url('font-project.TTF'); } 
+            h1 {
+               font-family: Artichokey
+            }
+          </style>
         <div class="page1">
         <div class="typing">
-        <h1>hannah schweitzer</h1>
+        <h1>Hannah Schweitzer</h1>
         </div>
+        
          <div class="button">
          <a href="img/Resume-9.pdf">RESUME</a>
          </div>
+        
+
         </div>
         
         
@@ -42,39 +51,75 @@
     </div>
   <br></br>
   
-    <h2>2022 ECAC Men's Championship</h2>
-    <div class="left">
-      <p>In 2022 CCTV was invided to broadcast the ECAC Men's Championship games in Lake Placid.</p>
-    
-      
-    <img src="img/espn2.jpg" alt="ecac" />
+    <h2>UX Prototype</h2>
+    <div class="center2">
+      <p>The Clarkson Integrator was once a physical newspaper that reflected the mindset of students
+        on the Clarkson University campus. The former Clarkson Integrator never changed from using
+        physical copies into the digital age and lost many readers because of it. After disbanding a couple years
+        ago, I decided to create a prototype of the newspaper in order to bring it back. The prototype I
+        constructed is an application in which the user is able to read, comment, and share articles written by
+        college students on the Clarkson University campus.</p>
+
+    <img src="img/Wireframe-1.png" />
       
   </div>
+  <!--Slideshow-->
+  <section class="slideshow">
+    <div class="slideshow-wrapper">
+      <div class="slide fade">
+        <div class="numberof">1 of 4</div>
+        <img src="img/Photos of UX Prototype/iPhone 13, 12 Pro Max – 3.png"/>
+      </div><!-- end .slide.fade -->
+      <div class="slide fade">
+        <div class="numberof">2 of 4</div>
+        <img src="img/Photos of UX Prototype/iPhone 13, 12 Pro Max – 4.png"/>
+      </div><!-- end .slide.fade -->
+      <div class="slide fade">
+        <div class="numberof">3 of 4</div>
+        <img src="img/Photos of UX Prototype/iPhone 13, 12 Pro Max – 5.png"/>
+      </div><!-- end .slide.fade -->
+      <div class="slide fade">
+        <div class="numberof">4 of 4</div>
+        <img src="img/Photos of UX Prototype/iPhone 13, 12 Pro Max – 6.png"/>
+      </div><!-- end .slide.fade -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;<!--unicode for less-than-sign--></a>
+      <a class="next" onclick="plusSlides(1)">&#10095;<!--unicode for greater-than-sign--></a>
+    </div><!--end slideshow-wrapper-->
+    <br />
+    <div class="text-center">
+      <span class="indicator" onclick="currentSlide(1)"><img src="img/Photos of UX Prototype/iPhone 13, 12 Pro Max – 3.png"/></span>
+      <span class="indicator" onclick="currentSlide(2)"><img src="img/Photos of UX Prototype/iPhone 13, 12 Pro Max – 4.png"/></span>
+      <span class="indicator" onclick="currentSlide(3)"><img src="img/Photos of UX Prototype/iPhone 13, 12 Pro Max – 5.png"/></span>
+      <span class="indicator" onclick="currentSlide(4)"><img src="img/Photos of UX Prototype/iPhone 13, 12 Pro Max – 6.png"/></span>
+    </div>
   <br></br>
   
     <h2>Original Logos</h2>
     <p>Logos designed for Underscore, a show by NCPR to get regional musicians of the North Contry more promotion. </p>
     <div class="logos">
     <figure>
-      <a href="#"><img src="img/underscore/1.png" alt="1" > </a>
+      <img src="img/underscore/1.png" alt="1" >
     
     </figure>
     <figure>
-      <a href="#"> <img src="img/underscore/2.png" alt="2" > </a>
+      <img src="img/underscore/2.png" alt="2" >
     </figure>
     <figure>
-      <a href="#"><img src="img/underscore/3.png" alt="3"> </a>
+     <img src="img/underscore/3.png" alt="3">
     </figure>
     <figure>
-      <a href="#"> <img src="img/underscore/4.png" alt="4"> </a>
+    <img src="img/underscore/4.png" alt="4">
     
     </figure>
   </div>
   <br></br>
   
-      <h2>Behind the Scenes</h2>
+      <h2>Sports Broadcasting</h2>
     <div class="right">
-      <p>Take a look at our broadcast from behind the scenes.</p>
+      <p>
+        Director and Switchboard Operator for Clarkson University Hockey on ESPN+. In charge of output stream to ESPN+ with over 9,000 average viewers. Directed camera operators, replay operative, radio broadcasters, and graphics operative. 
+        Broadcasted the ECAC Hockey Men’s Semi-finals and Championship game in Lake Placid 2022 to ESPN+.
+        Followed play by play action on a Panasonic AK-HC3800 2/3" HD Broadcast Camera. Take a look at our broadcast from behind the scenes.</p>
     
       <iframe width=200 height=300 src="https://www.youtube.com/embed/buHYCBUL07c" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   
@@ -101,5 +146,7 @@
   <footer>
     <p>&copy; 2022 Hannah Schweitzer</p>
   </footer>
+  <!-- Scripts -->
+  <script src="js/page.js"></script>
   </body>
 </html>

@@ -35,14 +35,13 @@ html, body, main, section, header, div, article, aside, figure, figcaption, imag
     letter-spacing: 1px;
   }
   h1 {
-    font-family: 'Audiowide';
-    text-transform: uppercase;
-    font-size: 90px;
+    font-size: 120px;
     color: #6EC1F5;
   }
   h2 {
     text-align: center;
     margin-bottom: 1.5em;
+    font-family: 'Silkscreen';
   }
   p {
     margin-bottom: 1em;
@@ -77,11 +76,11 @@ html, body, main, section, header, div, article, aside, figure, figcaption, imag
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: 'Audiowide';
+  font-family: 'Silkscreen';
   font-size: 30px;
  
   letter-spacing: normal;
-  line-height: 1.5;
+  
   outline: none;
   overflow: hidden;
   padding: 20px 35px;
@@ -111,7 +110,22 @@ html, body, main, section, header, div, article, aside, figure, figcaption, imag
 
 .button:hover {
   box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) 
 }
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
 
 
 .icon {
@@ -226,7 +240,17 @@ ul.icons {
 
   .center img {
     width: 30%;
+  }
 
+  .center2 {
+    display: grid;
+    justify-content: center;
+    background-color: #182A36;
+    padding: 20px 20px;
+    line-height: 4rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    margin-bottom: 20rem;
   }
 
   a:link {
@@ -252,7 +276,6 @@ ul.icons {
     padding-bottom: 2rem;
   }
   .left p {
-    float: left;
     text-overflow: clip;
     text-align: center;
     padding: 200px 0;
@@ -268,7 +291,7 @@ ul.icons {
   
   
   .logos img {
-    border-radius: 100%;
+  
     object-fit: cover;
     height: 200px;
     min-width: 200px;
@@ -301,13 +324,103 @@ ul.icons {
     float: left;
   }
   .right p {
-    float: right;
-    text-overflow: clip;
-    text-align: center;
-    padding: 200px 0;
-    margin: 10px;
+    line-height: 40px;
+    text-align: left;
+    padding: 200px, 0px;
+    margin: 20px;
   }
   
+  .slideshow {
+    background-color: var(--bg);
+    padding: 1em;
+  }
+  .slideshow-wrapper {
+    position: relative; /*-- this allows children to be position absolutely --*/
+    margin: auto; /*-- simple centering method--*/  max-width: 100%; /*-- contrains slideshow on largest screens --*/
+  }
+  .slideshow-wrapper img {
+    width: 30%; /*-- makes slideshow responsive in size --*/
+    justify-content: center;
+  }
+  .prev, .next {
+    cursor: pointer; /*-- changes hover cursor to the hand --*/
+    position: absolute; /*-- positions arrows absolutely--*/
+    top: 50%; /*-- positions arrows half the height of parent from top --*/
+    width: auto; /*-- matches width of parent --*/
+    padding: 16px; /*-- adds a little bit of space--*/
+    margin-top: -22px; /*-- adjusts position by height of arrows --*/
+    color: white; /*-- sets color for contrast --*/
+    font-weight: bold; /*-- selects heavier font --*/
+    font-size: 18px; /*-- sets arrow font size --*/
+    transition: 1.2s ease; /*-- sets transition speed for arrow hover--*/
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none; /*-- prevents users from selecting buttons --*/
+  }
+  .next {
+    right: 0; /*-- positions next arrow hard right --*/
+    border-radius: 3px 0 0 3px; /*-- rounds the outside borders --*/
+  }
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8); /*-- gives a background for contrast on hover --*/
+  }
+  .captiontext {
+    background: rgba(0,0,0,0.4); /*-- transparent black background --*/
+    color: #f2f2f2; /*-- sets color to almost white --*/
+    font-size: 22px; /*-- sets font size --*/
+    padding: 8px 12px; /*-- sets caption padding --*/
+    position: absolute; /*-- positions caption text absolutely--*/
+    bottom: 8px; /*-- sets position 8px from bottom --*/
+    width: 100%; /*-- sets width equal to container width --*/
+    text-align: center; /*-- aligns text center --*/
+  }
+  .numberof {
+    color: #f2f2f2; /*-- sets color to almost white --*/
+    font-size: 12px; /*-- sets font size --*/
+    padding: 8px 12px; /*-- sets numberof padding --*/
+    position: absolute; /*-- positions numberof text absolutely--*/
+    top: 0; /*-- sets position hard to the top--*/
+  }
+  .text-center {
+    display: flex;
+  }
+  .indicator {
+    cursor:pointer; /*-- changes hover cursor to the hand --*/
+    height: auto; /*-- sets height of pics --*/
+    width: 25%; /*-- sets width of pics --*/
+    margin: 0 2px; /*-- adds margin between pics --*/
+    background-color: #bbb; /*-- sets background color to light gray --*/
+    display: inline-block; /*-- displays in a horizontal line --*/
+    transition: all 250ms ease-in-out; /*-- allows opacity change to take time --*/
+    opacity: .5;
+  }
+  .indicator img {
+    width: 100% !important; /*-- small images fill available space --*/
+  }
+  .active, .indicator:hover {
+    opacity: 1; /*-- makes fully visible when hovered  --*/
+  }
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade; /*-- webkit prefix  --*/
+    -webkit-animation-duration: 1.5s; /*-- webkit prefix --*/
+    animation-name: fade; /*-- defines which animation to use --*/
+    animation-duration: 3s; /*-- sets the duration --*/
+  }
+  @-webkit-keyframes fade { /*-- webkit prefix --*/
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  @keyframes fade { /*-- sets "fade" animation properties --*/
+    from {opacity: .4} /*-- sets start of animation --*/
+    to {opacity: 1} /*-- sets end of animation --*/
+  }
+  /* On smaller screens, hides slideshow */
+  @media only screen and (max-width: 767px) {
+    .slideshow {display: none;}
+  }
+
 
   footer {
     padding: 2rem 2rem 1rem 2rem;
