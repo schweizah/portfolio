@@ -170,6 +170,7 @@ html, body, main, section, header, div, article, aside, figure, figcaption, imag
     border-bottom: none;
     position: relative;
     text-align: center;
+    
 }
 
     .icon:before {
@@ -242,11 +243,14 @@ a.icon.style2:active:before {
 
 
 ul.icons {
-    cursor: default;
+  position: fixed;  
+  cursor: default;
     list-style: none;
     padding-left: 0;
     display: flex;
     justify-content: center;
+    margin-top: 20px;
+padding-right: 830px;
 }
 
     ul.icons li {
@@ -359,12 +363,7 @@ ul.icons {
     margin-bottom: 1.5rem;
   }
 
-  .right iframe {
-    float: right;
-    width: 300%;
-    margin-top: 100px;
-    margin: auto;
-  }
+ 
   .right p {
     line-height: 40px;
     text-align: left;
