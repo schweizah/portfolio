@@ -35,9 +35,10 @@ html, body, main, section, header, div, article, aside, figure, figcaption, imag
     letter-spacing: 1px;
   }
   h1 {
-    font-size: 120px;
+    font-size: 95px;
     color: #6EC1F5;
     margin-bottom: 0px;
+    font-family: 'Silkscreen';
   }
   h2 {
     text-align: center;
@@ -88,7 +89,7 @@ html, body, main, section, header, div, article, aside, figure, figcaption, imag
   width: 100%;
 
   /* Create diagonal sides */
-  transform: skewY(-10deg);
+ 
 
   /* Background color */
   background-color: #182a369a;;
@@ -102,8 +103,9 @@ html, body, main, section, header, div, article, aside, figure, figcaption, imag
 
 /* CSS */
 .button {
+  margin-left: 15px;
+margin-bottom: 15px;
   appearance: none;
-  margin-left: 30px;
   backface-visibility: hidden;
   background-color: #6EC1F5;
   border-radius: 8px;
@@ -146,7 +148,7 @@ html, body, main, section, header, div, article, aside, figure, figcaption, imag
 }
 
 .button:hover {
-  box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
+  box-shadow: rgba(255, 255, 255, 0.098) 0 6px 12px;
   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) 
 }
 @keyframes shake {
