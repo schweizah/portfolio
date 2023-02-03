@@ -73,31 +73,7 @@ html, body, main, section, header, div, article, aside, figure, figcaption, imag
     margin-bottom: 350px;
 }
 
-.diagonal-section {
-  /* Used to position the diagonal area */
-  position: relative;
-}
 
-.diagonal-section__diagonal {
-  /* Absolute position */
-  left: 0px;
-  position: absolute;
-  top: 0px;
-
-  /* Take full size */
-  height: 100%;
-  width: 100%;
-
-  /* Create diagonal sides */
- 
-
-  /* Background color */
-  background-color: #182a369a;;
-
-  /* Displayed under the main content */
-  z-index: -1;
- 
-}
 
 
 
@@ -297,7 +273,27 @@ padding-right: 830px;
     margin-right: 20rem;
     margin-bottom: 20rem;
   }
+.video {
+  display: grid;
+  justify-content: center;
+  line-height: 4rem;
+  margin-left: 20rem;
+  margin-right: 20rem;
+  margin-bottom: 20rem;
+}
 
+.video a {
+  display: flex;
+  justify-content: center;
+}
+
+.video img:hover{
+  cursor: pointer;
+  opacity:0.4 !important;
+  filter:alpha(opacity=40) !important; 
+  box-shadow: 0 0 0px #000000 !important;
+  transition: var(--reg);
+}
   a:link {
     color: var(--text);
     text-decoration: underline;
@@ -470,6 +466,7 @@ padding-right: 830px;
     font-size: 1.4rem;
   }
  
+  /*-- Media Queries --*/
   @media screen and (min-width: 550px) {
     body {width: 98vw;}
   }
@@ -493,9 +490,9 @@ padding-right: 830px;
   }
 
   @media screen and (max-width: 990px) {
-    .eboard {flex-direction: column; align-items: center;}
+    .logos {flex-direction: column; align-items: center;}
     .right {flex-direction: column;}
     .left {flex-direction: column;}
-    
+    .typing {overflow-wrap: normal;}
     
   }
