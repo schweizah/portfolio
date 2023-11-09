@@ -4,15 +4,6 @@
   //  window.scrollBy(0,10);
  //   scrolldelay = setTimeout(pageScroll,10);
 //}
-var delayInMilliseconds = 5500; //1000=1second
-
-setTimeout(function() {
-    window.onload = window.scrollTo({
-        top: 750,
-        left: 100,
-        behavior: 'smooth'
-      });
-}, delayInMilliseconds);
 
 
 // Page Scripts

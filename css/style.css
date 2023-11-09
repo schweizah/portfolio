@@ -1,76 +1,73 @@
-@import url(fontawesome-all.min.css);
-
 html, body, main, section, header, div, article, aside, figure, figcaption, image, iframe, h1, h2, h3, h4, h5, h6, p, {
-    margin: 0;
-    padding: 0;
-  }
- 
-  :root {
-    --background: #182A36;
-    --button: #5f5f5f;
-    --text: #f3eeee;
-    --accent: #6EC1F5;
-    --dk-acc: #6EC1F5;
-    --reg: all .22s ease-in-out;
-    --font: 'Montserrat', sans-serif;
-    font-size: 62.5%;
-  }
- 
-  ::selection {
-    color: var(--background);
-    background-color: var(--accent);
-  }
-  body {
-    color: var(--text);
-    font-size: 2rem;
-    width: 98vw;
-    margin: auto;
-    line-height: 1.3;
-    font-weight: 500;
-    font-family: var(--font);
-    padding: 2rem 0;
-  }
-  .nav, h2, h3, h4, h5, h6, .btn {
-    font-family: 'Montserrat';
-    letter-spacing: 1px;
-  }
-  h1 {
-    font-size: 95px;
-    color: #6EC1F5;
-    margin-bottom: 0px;
-    font-family: 'Silkscreen';
-  }
-  h2 {
-    text-align: center;
-    margin-bottom: 1.5em;
-    font-family: 'Silkscreen';
-  }
-  p {
-    margin-bottom: 1em;
-  }
-  /* -- Document --*/
-  body {
-   background: var(--background);
-   background-color: #355D75;
-   animation: blinkingBackground 5s infinite;
-  }
+  margin: 0;
+  padding: 0;
+}
 
-  @keyframes blinkingBackground{
-		0%		{ background-color: #355d75;}
-		25%		{ background-color: #355d75f6;}
-		50%		{ background-color: #355d75ef;}
-		75%		{ background-color: #355d75f5;}
-		100%	        { background-color: #355d75;}
-	}
-  .typing > *{
-    overflow: hidden;
-    white-space: nowrap;
-    animation: typingAnim 5s steps(40);
-   
-  }
+:root {
+  --background: #182A36;
+  --button: #5f5f5f;
+  --text: #06111D;
+  --accent: #6EC1F5;
+  --dk-acc: #6EC1F5;
+  --reg: all .22s ease-in-out;
+  --font: 'Montserrat', sans-serif;
+  font-size: 62.5%;
+}
+
+::selection {
+  color: var(--background);
+  background-color: var(--accent);
+}
+body {
+  color: var(--text);
+  font-size: 2rem;
+  width: 98vw;
+  margin: auto;
+  line-height: 1.3;
+  font-weight: 500;
+  font-family: var(--font);
+  padding: 2rem 0;
+}
+.nav, h2, h3, h4, h5, h6, .btn {
+  font-family: 'Montserrat';
+  letter-spacing: 1px;
+}
+h1 {
+  font-size: 95px;
+  color: #182A36;
+  font-family: 'Mukta';
+}
+h2 {
+  text-align: center;
+  color: #182A36;
+  margin-bottom: 1.5em;
+  font-family: 'Mukta';
+}
+p {
+  margin-bottom: 1em;
+}
+/* -- Document --*/
+body {
+ background-image: url('../img/bkg/bkg9.png');
+ background-attachment: fixed;
+background-color: rgb(255, 255, 255);
+
+}
+
+body::before {
+  content: "";
+   /* The last value (0.5) controls the overlay opacity (0.0 to 1.0) */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
 .page1 {
-    margin-top: 300px;
-    margin-bottom: 350px;
+  margin-top: 200px;
+  margin-bottom: 350px;
 }
 
 
@@ -79,420 +76,492 @@ html, body, main, section, header, div, article, aside, figure, figcaption, imag
 
 /* CSS */
 .button {
-  margin-left: 15px;
-margin-bottom: 15px;
-  appearance: none;
-  backface-visibility: hidden;
-  background-color: #6EC1F5;
-  border-radius: 8px;
-  border-style: none;
-  box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: 'Silkscreen';
-  font-size: 30px;
- 
-  letter-spacing: normal;
-  
-  outline: none;
-  overflow: hidden;
-  padding: 20px 35px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  transform: translate3d(0, 0, 0);
-  transition: all .3s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: top;
-  white-space: nowrap;
+position: absolute;
+margin-left: 30px;
+padding-left: 10px;
+transform: translate(-50%, -50%);
+text-align: center;
+margin-bottom: 30px;
+appearance: none;
+backface-visibility: hidden;
+background-color: #06111D;
+border-radius: 8px;
+border-style: none;
+box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
+box-sizing: border-box;
+color: #fff;
+cursor: pointer;
+display: inline-block;
+font-family: 'Mukta';
+font-size: 30px;
+
+letter-spacing: normal;
+
+outline: none;
+overflow: hidden;
+padding: 20px 35px;
+position: relative;
+text-align: center;
+text-decoration: none;
+transform: translate3d(0, 0, 0);
+transition: all .3s;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+vertical-align: top;
+white-space: nowrap;
 }
 
 .button:hover {
-  background-color: #182A36;
-  opacity: 1;
-  transform: translateY(0);
-  transition-duration: .35s;
+background-color: #182A36;
+opacity: 1;
+transform: translateY(0);
+transition-duration: .35s;
 }
 
 .button:active {
-  transform: translateY(2px);
-  transition-duration: .35s;
+transform: translateY(2px);
+transition-duration: .35s;
 }
 
 .button:hover {
-  box-shadow: rgba(255, 255, 255, 0.098) 0 6px 12px;
-  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) 
+box-shadow: rgba(255, 255, 255, 0.098) 0 6px 12px;
+animation: shake 1.2s cubic-bezier(.36,.07,.19,.97) 
 }
 @keyframes shake {
-    10%, 90% {
-      transform: translate3d(-1px, 0, 0);
-    }
-    20%, 80% {
-      transform: translate3d(2px, 0, 0);
-    }
-    30%, 50%, 70% {
-      transform: translate3d(-4px, 0, 0);
-    }
-    40%, 60% {
-      transform: translate3d(4px, 0, 0);
-    }
+  10%, 90% {
+    transform: translate3d(0, -1px, 0);
   }
+  20%, 80% {
+    transform: translate3d(0, 2px, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(0, -4px, 0);
+  }
+  40%, 60% {
+    transform: translate3d(0, 4px, 0);
+  }
+}
 
 
 .icon {
-    text-decoration: none;
-    border-bottom: none;
-    position: relative;
-    text-align: center;
-    
+  font-family: 'Font Awesome 5 Free';
+  text-decoration: none;
+  border-bottom: none;
+  position: relative;
+  text-align: center;
+  
 }
 
-    .icon:before {
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
-        display: inline-block;
-        font-style: normal;
-        font-variant: normal;
-        text-rendering: auto;
-        line-height: 1;
-        text-transform: none !important;
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 400;
-    }
+  .icon:before {
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      line-height: 1;
+      text-transform: none !important;
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 400;
+  }
 
-    .icon > .label {
-        display: none;
-    }
+  .icon > .label {
+      display: none;
+  }
 
-    .icon:before {
-        line-height: inherit;
-    }
+  .icon:before {
+      line-height: inherit;
+  }
 
-    .icon.solid:before {
-        font-weight: 900;
-    }
+  .icon.solid:before {
+      font-weight: 900;
+  }
 
-    .icon.brands:before {
-        font-family: 'Font Awesome 5 Brands';
-    }
+  .icon.brands:before {
+      font-family: 'Font Awesome 5 Brands';
+  }
 
-    .icon.style2:before {
-        border-radius: 2.75em;
-        display: inline-block;
-        height: 2.75em;
-        line-height: 2.75em;
-        width: 2.75em;
-    }
-
-    .icon.major {
-        display: block;
-        margin: 0 0 1rem 0;
-    }
-
-        .icon.major:before {
-            font-size: 1.25rem;
-        }
-
-a.icon.style2:before {
+  .icon.style2:before {
     -moz-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
     -webkit-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
     -ms-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
     transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+
+  .icon.major {
+      display: block;
+      margin: 0 0 1rem 0;
+  }
+
+      .icon.major:before {
+          font-size: 1.25rem;
+      }
+
+a.icon.style2:before {
+  -moz-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .icon.style2:before {
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
 }
 
 a.icon.style2:hover:before {
-    box-shadow: inset 0 0 0 1px #47D3E5;
-    color: #47D3E5;
+  box-shadow: inset 0 0 0 1px #47D3E5;
+  color: #47D3E5;
 }
 
 a.icon.style2:active:before {
-    background-color: rgba(71, 211, 229, 0.1);
-    box-shadow: inset 0 0 0 1px #47D3E5;
-    color: #47D3E5;
+  background-color: rgba(71, 211, 229, 0.1);
+  box-shadow: inset 0 0 0 1px #47D3E5;
+  color: #47D3E5;
 }
 
 
 ul.icons {
-  position: fixed;  
+  position: fixed;
   cursor: default;
-    list-style: none;
-    padding-left: 0;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-padding-right: 830px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 0; /* Remove padding to prevent pushing icons off-screen */
 }
 
-    ul.icons li {
-        display: inline-block;
-        padding: 0 0.75rem 0 0;
-    }
+ul.icons li {
+  display: inline-block;
+  margin-right: 10px; /* Add margin to create spacing between icons */
+}
 
-        ul.icons li:last-child {
-            padding-right: 0;
-        }
+ul.icons li:last-child {
+  margin-right: 0; /* Remove margin from the last icon */
+}
+
+
+.page1-text {
+display: flex;
+align-items: center;
+margin-bottom: 170px;
+}
+
+.page1-text h1 {
+text-align: center;
+
+}
+
+.page1-text img {
+margin-right: 60px;
+width: 350px; /* Set the desired width */
+height: 350px; /* Set the same height as the width to make it a square */
+object-fit: cover;
+border-radius: 100%;
+object-position: ;
+}
+@keyframes typingAnim{
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes typingSpeak{
+  0% { width: 1em; height: .1em }
+  100% { width: 1em; height: .5em; }
+}
+.center {
+  text-align: center;
+}
 
 
 
-  @keyframes typingAnim{
-    from { width: 0 }
-    to { width: 100% }
-  }
-  @keyframes typingSpeak{
-    0% { width: 1em; height: .1em }
-    100% { width: 1em; height: .5em; }
-  }
-  .center {
-    display: grid;
-    justify-content: center;
-    line-height: 4rem;
-    margin-left: 20rem;
-    margin-right: 20rem;
-    margin-bottom: 20rem;
-  }
-
-  .center img {
-    width: 30%;
-  }
-
-  .center2 {
-    display: grid;
-    justify-content: center;
-    background-color: #182A36;
-    padding: 20px 20px;
-    line-height: 4rem;
-    margin-left: 20rem;
-    margin-right: 20rem;
-    margin-bottom: 20rem;
-  }
-.video {
+.center2 {
   display: grid;
   justify-content: center;
+  background-color: #182a367c;
+  padding: 20px 20px;
   line-height: 4rem;
   margin-left: 20rem;
   margin-right: 20rem;
   margin-bottom: 20rem;
 }
+.video {
+display: grid;
+justify-content: center;
+line-height: 4rem;
+margin-left: 20rem;
+margin-right: 20rem;
+margin-bottom: 20rem;
+}
 
 .video a {
-  display: flex;
-  justify-content: center;
+display: flex;
+justify-content: center;
 }
 
 .video img:hover{
+cursor: pointer;
+opacity:0.4 !important;
+filter:alpha(opacity=40) !important; 
+box-shadow: 0 0 0px #000000 !important;
+transition: var(--reg);
+}
+
+.video2 {
+height: 700px;
+margin: 10px;
+}
+
+a:link {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:visited {
+  color: var(--text);
+}
+a:hover {
+  opacity: 50%;
+}
+a:active, a.active {
+  color: var(--accent);
+}
+video {
+  object-fit: fill;
+}
+.left {
+  display: grid;
+  background-color: #182A3655;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+}
+
+.left .content {
+display: flex;
+align-items: center;
+}
+
+.left p {
+  text-overflow: clip;
+  text-align: left;
+  line-height: 30px;
+  padding: 100px 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 10px;
+}
+.left img{
+  width: 550px;
+  height: auto;
+  margin: 10px;
+}
+ .left .img2{
+  margin: 10px; 
+  width: 180%; 
+  height: auto;/* Set the same height as the width to make it a square */
+ }
+
+ .left2 {
+  background-color: #182A3655;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  text-align: left;
+ }
+
+ .left2 p {
+  text-overflow: clip;
+  text-align: left;
+  line-height: 30px;
+  padding: 100px 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 10px;
+}
+
+.left2 img {
+align-content: end;
+width: 550px;
+  height: auto;
+  margin: 10px;
+}
+
+.left3 {
+  display: table-row;
+  background-color: #182a3655;
+}
+
+.left3 h2{
+  text-align: left;
+  margin: 10px;
+  padding: 10px;
+  color: #6a6a6a;
+  margin-bottom: 0px;
+}
+
+.left3 p {
+  text-overflow: clip;
+  text-align: left;
+  line-height: 30px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.logos img {
+
+  object-fit: cover;
+  height: 200px;
+  min-width: 200px;
+}
+ .logos img:hover{
   cursor: pointer;
   opacity:0.4 !important;
   filter:alpha(opacity=40) !important; 
   box-shadow: 0 0 0px #000000 !important;
   transition: var(--reg);
 }
-  a:link {
-    color: var(--text);
-    text-decoration: underline;
-  }
-  a:visited {
-    color: var(--text);
-  }
-  a:hover {
-    color: var(--accent);
-  }
-  a:active, a.active {
-    color: var(--accent);
-  }
-  video {
-    object-fit: fill;
-  }
-  .left {
-    display: flex;
-    background-color: #182A36;
-    padding-right: 2rem;
-    padding-bottom: 2rem;
-  }
-  .left p {
-    text-overflow: clip;
-    text-align: left;
-    line-height: 30px;
-    padding: 100px 0;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: 10px;
-  }
-  .left img {
-    float: right;
-    width: 550px;
-    height: auto;
-    margin: auto;
+.logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.logos figcaption {
+  text-align: center;
+}
+.right {
+  text-align: right;
+  margin-bottom: 1.5rem;
+}
 
-  }
-  
-  
-  .logos img {
-  
-    object-fit: cover;
-    height: 200px;
-    min-width: 200px;
-  }
-   .logos img:hover{
-    cursor: pointer;
-    opacity:0.4 !important;
-    filter:alpha(opacity=40) !important; 
-    box-shadow: 0 0 0px #000000 !important;
-    transition: var(--reg);
-  }
-  .logos {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .logos figcaption {
-    text-align: center;
-  }
-  .right {
-    display: flex;
-    background-color: #182A36;
-    margin-bottom: 1.5rem;
-  }
 
- 
-  .right p {
-    line-height: 40px;
-    text-align: left;
-    padding: 200px, 0px;
-    margin: 20px;
-  }
-  
-  .slideshow {
-  
-    padding: 1em;
-  }
-  .slideshow-wrapper {
-    position: relative; /*-- this allows children to be position absolutely --*/
-     /*-- simple centering method--*/ 
-  }
-  .slideshow-wrapper img {
-    width: 30%; /*-- makes slideshow responsive in size --*/
-    margin-left: 400px;
-  }
-  .prev, .next {
-    cursor: pointer; /*-- changes hover cursor to the hand --*/
-    position: absolute; /*-- positions arrows absolutely--*/
-    top: 50%; /*-- positions arrows half the height of parent from top --*/
-    width: auto; /*-- matches width of parent --*/
-    padding: 16px; /*-- adds a little bit of space--*/
-    margin-top: -22px; /*-- adjusts position by height of arrows --*/
-    color: white; /*-- sets color for contrast --*/
-    font-weight: bold; /*-- selects heavier font --*/
-    font-size: 18px; /*-- sets arrow font size --*/
-    transition: 1.2s ease; /*-- sets transition speed for arrow hover--*/
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none; /*-- prevents users from selecting buttons --*/
-  }
-  .next {
-    right: 400px; /*-- positions next arrow hard right --*/
-    border-radius: 3px 0 0 3px; /*-- rounds the outside borders --*/
-  }
+.right img {
+  border-radius: 100%;
+  width: 40%;
+}
+
+.slideshow {
+
+  padding: 1em;
+}
+.slideshow-wrapper {
+  position: relative; /*-- this allows children to be position absolutely --*/
+   /*-- simple centering method--*/ 
+}
+.slideshow-wrapper img {
+  width: 30%; /*-- makes slideshow responsive in size --*/
+  margin-left: 500px;
+}
+.prev, .next {
+  cursor: pointer; /*-- changes hover cursor to the hand --*/
+  position: absolute; /*-- positions arrows absolutely--*/
+  top: 50%; /*-- positions arrows half the height of parent from top --*/
+  width: auto; /*-- matches width of parent --*/
+  padding: 16px; /*-- adds a little bit of space--*/
+  margin-top: -22px; /*-- adjusts position by height of arrows --*/
+  color: white; /*-- sets color for contrast --*/
+  font-weight: bold; /*-- selects heavier font --*/
+  font-size: 18px; /*-- sets arrow font size --*/
+  transition: 1.2s ease; /*-- sets transition speed for arrow hover--*/
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none; /*-- prevents users from selecting buttons --*/
+}
+.next {
+  right: 400px; /*-- positions next arrow hard right --*/
+  border-radius: 3px 0 0 3px; /*-- rounds the outside borders --*/
+}
 
 .prev {
-  right:720px;
+right:720px;
 }
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8); /*-- gives a background for contrast on hover --*/
-  }
-  .captiontext {
-    background: rgba(0,0,0,0.4); /*-- transparent black background --*/
-    color: #f2f2f2; /*-- sets color to almost white --*/
-    font-size: 22px; /*-- sets font size --*/
-    padding: 8px 12px; /*-- sets caption padding --*/
-    position: absolute; /*-- positions caption text absolutely--*/
-    bottom: 8px; /*-- sets position 8px from bottom --*/
-    width: 100%; /*-- sets width equal to container width --*/
-    text-align: center; /*-- aligns text center --*/
-  }
-  .text-center {
-    display: flex;
-  }
-  .indicator {
-    cursor:pointer; /*-- changes hover cursor to the hand --*/
-    height: auto; /*-- sets height of pics --*/
-    width: 25%; /*-- sets width of pics --*/
-    margin: 0 2px; /*-- adds margin between pics --*/
-    background-color: #bbb; /*-- sets background color to light gray --*/
-    display: inline-block; /*-- displays in a horizontal line --*/
-    transition: all 250ms ease-in-out; /*-- allows opacity change to take time --*/
-    opacity: .5;
-  }
-  .indicator img {
-    width: 100% !important; /*-- small images fill available space --*/
-  }
-  .active, .indicator:hover {
-    opacity: 1; /*-- makes fully visible when hovered  --*/
-  }
-  /* Fading animation */
-  .fade {
-    -webkit-animation-name: fade; /*-- webkit prefix  --*/
-    -webkit-animation-duration: 1.5s; /*-- webkit prefix --*/
-    animation-name: fade; /*-- defines which animation to use --*/
-    animation-duration: 3s; /*-- sets the duration --*/
-  }
-  @-webkit-keyframes fade { /*-- webkit prefix --*/
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-  @keyframes fade { /*-- sets "fade" animation properties --*/
-    from {opacity: .4} /*-- sets start of animation --*/
-    to {opacity: 1} /*-- sets end of animation --*/
-  }
-  /* On smaller screens, hides slideshow */
-  @media only screen and (max-width: 767px) {
-    .slideshow {display: none;}
-  }
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8); /*-- gives a background for contrast on hover --*/
+}
+.captiontext {
+  background: rgba(0,0,0,0.4); /*-- transparent black background --*/
+  color: #f2f2f2; /*-- sets color to almost white --*/
+  font-size: 22px; /*-- sets font size --*/
+  padding: 8px 12px; /*-- sets caption padding --*/
+  position: absolute; /*-- positions caption text absolutely--*/
+  bottom: 8px; /*-- sets position 8px from bottom --*/
+  width: 100%; /*-- sets width equal to container width --*/
+  text-align: center; /*-- aligns text center --*/
+}
+.text-center {
+  display: flex;
+}
+.indicator {
+  cursor:pointer; /*-- changes hover cursor to the hand --*/
+  height: auto; /*-- sets height of pics --*/
+  width: 25%; /*-- sets width of pics --*/
+  margin: 0 2px; /*-- adds margin between pics --*/
+  background-color: #bbb; /*-- sets background color to light gray --*/
+  display: inline-block; /*-- displays in a horizontal line --*/
+  transition: all 250ms ease-in-out; /*-- allows opacity change to take time --*/
+  opacity: .5;
+}
+.indicator img {
+  width: 100% !important; /*-- small images fill available space --*/
+}
+.active, .indicator:hover {
+  opacity: 1; /*-- makes fully visible when hovered  --*/
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade; /*-- webkit prefix  --*/
+  -webkit-animation-duration: 1.5s; /*-- webkit prefix --*/
+  animation-name: fade; /*-- defines which animation to use --*/
+  animation-duration: 3s; /*-- sets the duration --*/
+}
+@-webkit-keyframes fade { /*-- webkit prefix --*/
+  from {opacity: .4}
+  to {opacity: 1}
+}
+@keyframes fade { /*-- sets "fade" animation properties --*/
+  from {opacity: .4} /*-- sets start of animation --*/
+  to {opacity: 1} /*-- sets end of animation --*/
+}
+/* On smaller screens, hides slideshow */
+@media only screen and (max-width: 767px) {
+  .slideshow {display: none;}
+}
 
 
-  footer {
-    padding: 2rem 2rem 1rem 2rem;
-    display: flex;
-    direction: row;
-    justify-content: space-between;
-    font-size: 1.4rem;
-  }
- 
-  /*-- Media Queries --*/
-  @media screen and (min-width: 550px) {
-    body {width: 98vw;}
-  }
-  @media screen and (min-width: 768px) {
-    body {width: 86vw;}
-    
-  }
-  @media screen and (min-width: 990px) {
-    body {width: 84vw;}
-    
-   
-  }
-  @media screen and (min-width: 1280px) {
-    body {width: 80vw;}
-   
-   
-  }
-  @media screen and (min-width: 1440px) {
-    body {width: 78vw;}
-   
-  }
+footer {
+  padding: 2rem 2rem 1rem 2rem;
+  display: flex;
+  direction: row;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
 
-  @media screen and (max-width: 990px) {
-    .logos {flex-direction: column; align-items: center;}
-    .right {flex-direction: column;}
-    .left {flex-direction: column;}
-    .typing {overflow-wrap: normal;}
-    
-  }
+/* Media Queries */
+@media screen and (max-width: 550px) {
+  body { width: 98vw; }
+}
+
+@media screen and (min-width: 551px) and (max-width: 768px) {
+  body { width: 86vw; }
+}
+
+@media screen and (min-width: 769px) and (max-width: 990px) {
+  body { width: 84vw; }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1280px) {
+  body { width: 80vw; }
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+  body { width: 78vw; }
+}
+
+@media screen and (min-width: 1441px) {
+  /* No specific styling for screens wider than 1440px */
+}
+
+@media screen and (max-width: 990px) {
+  .logos { flex-direction: column; align-items: center; }
+  .right { flex-direction: column; }
+  .left { flex-direction: column; }
+  .typing { overflow-wrap: normal; }
+}
