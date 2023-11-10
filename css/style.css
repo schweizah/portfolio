@@ -3,6 +3,12 @@ html, body, main, section, header, div, article, aside, figure, figcaption, imag
   padding: 0;
 }
 
+main {
+  margin-left: 30px;
+  margin-right: 30px;
+
+}
+
 :root {
   --background: #182A36;
   --button: #5f5f5f;
