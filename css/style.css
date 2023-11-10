@@ -84,7 +84,7 @@ text-align: center;
 margin-bottom: 30px;
 appearance: none;
 backface-visibility: hidden;
-background-color: #06111D;
+background-color: #06111da5;
 border-radius: 8px;
 border-style: none;
 box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
@@ -144,91 +144,16 @@ animation: shake 1.2s cubic-bezier(.36,.07,.19,.97)
 }
 
 
-.icon {
-  font-family: 'Font Awesome 5 Free';
-  text-decoration: none;
-  border-bottom: none;
-  position: relative;
-  text-align: center;
-  
-}
-
-  .icon:before {
-      -moz-osx-font-smoothing: grayscale;
-      -webkit-font-smoothing: antialiased;
-      display: inline-block;
-      font-style: normal;
-      font-variant: normal;
-      text-rendering: auto;
-      line-height: 1;
-      text-transform: none !important;
-      font-family: 'Font Awesome 5 Free';
-      font-weight: 400;
-  }
-
-  .icon > .label {
-      display: none;
-  }
-
-  .icon:before {
-      line-height: inherit;
-  }
-
-  .icon.solid:before {
-      font-weight: 900;
-  }
-
-  .icon.brands:before {
-      font-family: 'Font Awesome 5 Brands';
-  }
-
-  .icon.style2:before {
-    -moz-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
-    -webkit-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
-    -ms-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
-    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
-  }
-
-  .icon.major {
-      display: block;
-      margin: 0 0 1rem 0;
-  }
-
-      .icon.major:before {
-          font-size: 1.25rem;
-      }
-
-a.icon.style2:before {
-  -moz-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
-  -webkit-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
-  -ms-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
-  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
-}
-
-.icon.style2:before {
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
-}
-
-a.icon.style2:hover:before {
-  box-shadow: inset 0 0 0 1px #47D3E5;
-  color: #47D3E5;
-}
-
-a.icon.style2:active:before {
-  background-color: rgba(71, 211, 229, 0.1);
-  box-shadow: inset 0 0 0 1px #47D3E5;
-  color: #47D3E5;
-}
-
 
 ul.icons {
-  position: fixed;
-  cursor: default;
-  list-style: none;
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  padding: 0; /* Remove padding to prevent pushing icons off-screen */
+  align-items: center;
+  list-style:decimal;
+  display: flex;
+  justify-content: center; /* Centers the icons */
+
+  bottom: 20px; /* Adjust bottom margin */
+  padding: 0; 
 }
 
 ul.icons li {
@@ -239,6 +164,37 @@ ul.icons li {
 ul.icons li:last-child {
   margin-right: 0; /* Remove margin from the last icon */
 }
+
+ /* For Font Awesome 5 */
+.icon::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 800; /* Consider adjusting font weight to match your style */
+  display: table-row;
+  align-content: center;
+  content: "\f550"; /* Use the specific Unicode of your icon */
+}
+
+/* Additional classes */
+.icon.major::before {
+  font-size: 5rem;
+}
+
+/* Example styles for transitions and box-shadow */
+a.icon.style2::before {
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+a.icon.style2:hover::before {
+  box-shadow: inset 0 0 0 1px #1b1b1b;
+  color: #47D3E5;
+}
+
+a.icon.style2:active::before {
+  background-color: rgba(71, 211, 229, 0.1);
+  box-shadow: inset 0 0 0 1px #000000;
+  color: #47D3E5;
+}
+
 
 
 .page1-text {
@@ -561,7 +517,8 @@ footer {
 
 @media screen and (max-width: 990px) {
   .logos { flex-direction: column; align-items: center; }
-  .right { flex-direction: column; }
-  .left { flex-direction: column; }
-  .typing { overflow-wrap: normal; }
+  .left1 { flex-direction: column; }
+  .left2 { flex-direction: column; }
+  .left3 { flex-direction: column; }
+  .page1-text { flex-direction: column; }
 }
